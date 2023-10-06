@@ -9,8 +9,10 @@ import SwiftUI
 
 struct DescriptionView: View {
     
+    private let peculiarities = ["3-я линия", "Платный Wi-Fi в фойе", "30 км до аэропорта", "1 км до пляжа"]
+    
     private let columns = [
-        GridItem(.adaptive(minimum: 100)),
+        GridItem(.adaptive(minimum: 150)),
         //GridItem(.adaptive(minimum: 100))
     ]
     
@@ -21,8 +23,8 @@ struct DescriptionView: View {
                     .font(.system(size: 22, weight: .medium))
                 
                 LazyVGrid(columns: columns,  alignment: .leading) {
-                    ForEach(0..<4) { _ in
-                        PeculiarityRowView(text: "aadfadjjkljlljl;k;jkj;jk;ljljkkj;jkjl;khk")
+                    ForEach(peculiarities, id: \.self) { peculiarty in
+                        PeculiarityRowView(text: peculiarty)
                     }
                 }
                 

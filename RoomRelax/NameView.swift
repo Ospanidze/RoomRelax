@@ -19,7 +19,7 @@ struct NameView: View {
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(Color(.systemBlue))
         }
-        .background()
+        //.background()
         //.padding()
     }
 }

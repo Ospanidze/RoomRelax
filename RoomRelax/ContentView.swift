@@ -16,7 +16,7 @@ struct ContentView: View {
             
             VStack {
                 ScrollView {
-                    ForEach(0..<5) { _ in
+                    ForEach(0..<3) { _ in
                         TouristViewRow()
                             .cornerRadius(12)
                     }
@@ -29,8 +29,6 @@ struct ContentView: View {
                 }
                 
             }
-            
-            
         }
     }
 }

@@ -28,10 +28,6 @@ struct HotelView: View {
         .background(Color(.white))
         .cornerRadius(12)
     }
-    
-    init() {
-        //UIScrollView.appearance().isPagingEnabled = true
-    }
 }
 
 struct HotelView_Previews: PreviewProvider {

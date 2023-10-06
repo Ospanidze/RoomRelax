@@ -12,25 +12,34 @@ struct MainView: View {
     var body: some View {
         NavigationView {
        
-            VStack {
+            VStack(spacing: 0) {
                 ScrollView {
                     HotelView()
                     
                     DescriptionView()
                 }
+               
+                .background(
+                    Rectangle()
+                        .fill(Color.backgroundColor())
+                        //.ignoresSafeArea()
+                )
                 
-                
-                BlueButtonView(title: "К выбору номера", action: {})
-                    .padding(.top, 8)
-                    .padding(.leading)
-                    .padding(.trailing)
+                NavigationLink(destination: RoomListView()) {
+                    Text("К выбору номера")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 48)
+                    .background(Color(.systemBlue))
+                    .cornerRadius(12)
+                }
+                .padding(.top, 8)
+                .padding(.leading)
+                .padding(.trailing)
             }
-            .background(Color.backgroundColor())
             .navigationTitle("Отель")
-            //.navigationBarTitleDisplayMode(.inline)
+           // .navigationBarTitleDisplayMode(.inline)
         }
-    
-        
     }
 }
 

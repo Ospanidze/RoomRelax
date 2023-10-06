@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4785722AD048400081B8B4 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4785712AD048400081B8B4 /* RoomListView.swift */; };
+		EF4785742AD04FB00081B8B4 /* RoomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4785732AD04FB00081B8B4 /* RoomRowView.swift */; };
+		EF4785762AD0513D0081B8B4 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4785752AD0513D0081B8B4 /* TitleView.swift */; };
+		EF4785782AD057810081B8B4 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4785772AD057810081B8B4 /* RegisterView.swift */; };
+		EF47857A2AD063140081B8B4 /* ReservationNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4785792AD063140081B8B4 /* ReservationNameView.swift */; };
+		EF47857C2AD06A2A0081B8B4 /* InformationByerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47857B2AD06A2A0081B8B4 /* InformationByerView.swift */; };
+		EF47857E2AD074BB0081B8B4 /* PaidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47857D2AD074BB0081B8B4 /* PaidView.swift */; };
 		EF72DF692ACB127C007E00BB /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF72DF682ACB127C007E00BB /* BlueButtonView.swift */; };
 		EF72DF6C2ACB1405007E00BB /* Color + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF72DF6B2ACB1405007E00BB /* Color + ext.swift */; };
 		EF72DF6E2ACB1569007E00BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF72DF6D2ACB1569007E00BB /* MainView.swift */; };
@@ -26,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF4785712AD048400081B8B4 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
+		EF4785732AD04FB00081B8B4 /* RoomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRowView.swift; sourceTree = "<group>"; };
+		EF4785752AD0513D0081B8B4 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		EF4785772AD057810081B8B4 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EF4785792AD063140081B8B4 /* ReservationNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationNameView.swift; sourceTree = "<group>"; };
+		EF47857B2AD06A2A0081B8B4 /* InformationByerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationByerView.swift; sourceTree = "<group>"; };
+		EF47857D2AD074BB0081B8B4 /* PaidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidView.swift; sourceTree = "<group>"; };
 		EF72DF682ACB127C007E00BB /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		EF72DF6B2ACB1405007E00BB /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 		EF72DF6D2ACB1569007E00BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -78,6 +92,8 @@
 				EF72DF7A2ACB37D9007E00BB /* DescriptionView.swift */,
 				EF72DF7D2ACB4AF5007E00BB /* PeculiarityRowView.swift */,
 				EF72DF7F2ACB5172007E00BB /* ExplanationRowView.swift */,
+				EF4785772AD057810081B8B4 /* RegisterView.swift */,
+				EF47857D2AD074BB0081B8B4 /* PaidView.swift */,
 			);
 			path = DescriptionView;
 			sourceTree = "<group>";
@@ -115,6 +131,11 @@
 				EF72DF752ACB2E3C007E00BB /* NameView.swift */,
 				EF72DF772ACB321A007E00BB /* PriceView.swift */,
 				EF72DF7C2ACB37E1007E00BB /* DescriptionView */,
+				EF4785712AD048400081B8B4 /* RoomListView.swift */,
+				EF4785732AD04FB00081B8B4 /* RoomRowView.swift */,
+				EF4785752AD0513D0081B8B4 /* TitleView.swift */,
+				EF4785792AD063140081B8B4 /* ReservationNameView.swift */,
+				EF47857B2AD06A2A0081B8B4 /* InformationByerView.swift */,
 			);
 			path = RoomRelax;
 			sourceTree = "<group>";
@@ -204,13 +225,20 @@
 				EF72DF782ACB321A007E00BB /* PriceView.swift in Sources */,
 				EF72DF742ACB290C007E00BB /* RatingView.swift in Sources */,
 				EF72DF722ACB1ACF007E00BB /* ImageRowView.swift in Sources */,
+				EF47857E2AD074BB0081B8B4 /* PaidView.swift in Sources */,
 				EF72DF692ACB127C007E00BB /* BlueButtonView.swift in Sources */,
 				EF72DF702ACB1778007E00BB /* HotelView.swift in Sources */,
+				EF4785782AD057810081B8B4 /* RegisterView.swift in Sources */,
+				EF47857A2AD063140081B8B4 /* ReservationNameView.swift in Sources */,
+				EF4785722AD048400081B8B4 /* RoomListView.swift in Sources */,
 				EF72DF762ACB2E3C007E00BB /* NameView.swift in Sources */,
 				EFBDE02E2AC9679700B339A0 /* RoomRelaxApp.swift in Sources */,
+				EF4785762AD0513D0081B8B4 /* TitleView.swift in Sources */,
+				EF4785742AD04FB00081B8B4 /* RoomRowView.swift in Sources */,
 				EF72DF6C2ACB1405007E00BB /* Color + ext.swift in Sources */,
 				EF72DF802ACB5172007E00BB /* ExplanationRowView.swift in Sources */,
 				EF72DF7E2ACB4AF5007E00BB /* PeculiarityRowView.swift in Sources */,
+				EF47857C2AD06A2A0081B8B4 /* InformationByerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
