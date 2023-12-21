@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TouristView.swift
 //  RoomRelax
 //
 //  Created by Айдар Оспанов on 01.10.2023.
@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TouristView: View {
+    
+    
+    
     var body: some View {
         ZStack {
             Color(.systemGray6)
@@ -55,6 +58,6 @@ struct AddButtonView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TouristView()
     }
 }
