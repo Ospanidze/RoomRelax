@@ -145,10 +145,7 @@
 				EFBE66072B332BE100411491 /* Service */,
 				EFBE660C2B332F2600411491 /* ViewModels */,
 				EFBE66042B332BB900411491 /* Models */,
-				EFCD4BEA2B34D11C007F4D86 /* MainView */,
-				EFCD4BEB2B34D1E7007F4D86 /* RoomView */,
-				EFCD4BEC2B34D26C007F4D86 /* RegisterView */,
-				EFCD4BED2B34D2F6007F4D86 /* PaidView */,
+				EFCD4BF42B3565AB007F4D86 /* Core */,
 				EFCD4BE92B34D0FE007F4D86 /* Subviews */,
 				EFCD4BDA2B3474F3007F4D86 /* Helper.swift */,
 				EFBDE0312AC9679800B339A0 /* Assets.xcassets */,
@@ -274,6 +271,17 @@
 				EFCD4BF12B355E92007F4D86 /* Alert.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		EFCD4BF42B3565AB007F4D86 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD4BEA2B34D11C007F4D86 /* MainView */,
+				EFCD4BEB2B34D1E7007F4D86 /* RoomView */,
+				EFCD4BEC2B34D26C007F4D86 /* RegisterView */,
+				EFCD4BED2B34D2F6007F4D86 /* PaidView */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
