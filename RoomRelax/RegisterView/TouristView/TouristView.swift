@@ -9,26 +9,25 @@ import SwiftUI
 
 struct TouristView: View {
     
-    
+    @ObservedObject var viewModel: RegisterViewModel
     
     var body: some View {
         ZStack {
             Color(.systemGray6)
                 .ignoresSafeArea()
             
-            
             VStack {
                 ScrollView {
-                    ForEach(0..<3) { _ in
-                        TouristViewRow()
-                            .cornerRadius(12)
+                    ForEach(0..<viewModel.expandableNames.count, id: \.self) { index in
+                        TouristViewRow(index: index, isTapped: $viewModel.expandableNames[index].isExpanded, textFieldData: $viewModel.expandableNames[index].names)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
                     
                     
-                    AddButtonView()
+                    AddButtonView(action: {viewModel.addsExpandableNames()})
                         .frame(height: 58)
                         .background(Color.white)
-                        .cornerRadius(12)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 
             }
@@ -37,19 +36,22 @@ struct TouristView: View {
 }
 
 struct AddButtonView: View {
+    
+    let action: () -> Void
+    
     var body: some View {
         HStack {
             Text("Добавить туриста")
             
             Spacer()
             
-            Button(action: {print("add")}) {
+            Button(action: action ) {
                 Image(systemName: "plus")
                     .foregroundColor(.white)
             }
             .frame(width: 32, height: 32)
             .background(Color(.systemBlue))
-            .cornerRadius(6)
+            .clipShape(RoundedRectangle(cornerRadius: 6))
         }
         .padding(.leading)
         .padding(.trailing)
@@ -58,6 +60,6 @@ struct AddButtonView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        TouristView()
+        TouristView(viewModel: RegisterViewModel())
     }
 }

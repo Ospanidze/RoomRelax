@@ -13,7 +13,7 @@ struct ImageRowView: View {
         Image("asianSteak")
             .resizable()
             .frame(width: UIScreen.main.bounds.width - 32,height: 257)
-            .cornerRadius(15)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             
     }
 }

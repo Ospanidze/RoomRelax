@@ -26,6 +26,7 @@ extension Color {
     
     static func grayTextColor() -> Color {
         let color = #colorLiteral(red: 0.5098039216, green: 0.5294117647, blue: 0.5882352941, alpha: 1)
+        
         return Color(uiColor: color)
     }
     
@@ -33,4 +34,15 @@ extension Color {
         let color = #colorLiteral(red: 0.05098039216, green: 0.4470588235, blue: 1, alpha: 1)
         return Color(uiColor: color)
     }
+    
+    static func redColor() -> Color {
+        let color = #colorLiteral(red: 0.9215686275, green: 0.3411764706, blue: 0.3411764706, alpha: 0.85)
+        return Color(uiColor: color)
+    }
+    
+    static let brandPrimary = Color("brandPrimary")
+}
+
+extension UIColor {
+    static let brandPrimary = UIColor(named: "brandPrimary")
 }

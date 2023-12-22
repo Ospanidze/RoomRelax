@@ -19,7 +19,7 @@ struct TitleView: View {
         .padding(.vertical, 5)
         .padding(.horizontal, 10)
         .background(Color.blueColor().opacity(0.2))
-        .cornerRadius(5)
+        .clipShape(RoundedRectangle(cornerRadius: 5))
         .foregroundColor(Color(.systemBlue))
     }
 }

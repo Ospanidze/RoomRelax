@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct PriceView: View {
+    
+    let price: String
+    let priceForIt: String
+    
     var body: some View {
         HStack(alignment: .bottom, spacing: 8) {
-            Text("от 134 673 ₽")
+            Text("\(price) ₽")
                 .font(.system(size: 30, weight: .semibold))
             
             
-            Text("за тур с перелётом")
+            Text(priceForIt)
                 .foregroundColor(.grayTextColor())
                 .font(.system(size: 16, weight: .regular))
         }
@@ -24,6 +28,6 @@ struct PriceView: View {
 
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceView()
+        PriceView(price: "23131", priceForIt: "за 7 ночей с перелётом")
     }
 }

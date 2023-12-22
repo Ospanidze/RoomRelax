@@ -25,7 +25,7 @@ struct RatingView: View {
                             bottom: 5,
                             trailing: 10))
         .background(Color.orangeColor())
-        .cornerRadius(5)
+        .clipShape(RoundedRectangle(cornerRadius: 5))
     }
 }
 

@@ -9,35 +9,35 @@ import SwiftUI
 
 struct RoomRowView: View {
     
-    private let peculiarities = ["3-я линия", "Платный Wi-Fi в фойе", "30 км до аэропорта"]
+    let room: Room
     
     private let columns = [
-        GridItem(.adaptive(minimum: 100)),
-        //GridItem(.adaptive(minimum: 100))
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 0) {
-                    ForEach(0..<3) { _ in
-                        ImageRowView()
+            TabView {
+                ForEach(0..<room.imageUrls.count, id: \.self) { index in
+                    ZStack {
+                        HostelRemoteImage(urlString: room.imageUrls[index])
                     }
                 }
             }
-            Text("Стандартный с видом на бассейн или сад")
+            .frame(width: UIScreen.main.bounds.width - 32,height: 257)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+            
+            Text(room.name)
                 .font(.system(size: 22, weight: .medium))
-           
             
-            LazyVGrid(columns: columns,  alignment: .leading) {
-                ForEach(peculiarities, id: \.self) { peculiarty in
-                    PeculiarityRowView(text: peculiarty)
-                }
-            }
-            
+            CustomGridView(items: room.peculiarities, columns: 2)
             
             TitleView()
-            PriceView()
+            
+            PriceView(price: "\(room.price)", priceForIt: room.pricePer)
                 .padding(.vertical, 8)
             
 //            BlueButtonView(title: "Выбрать номер", action: {})
@@ -48,17 +48,17 @@ struct RoomRowView: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 48)
                 .background(Color(.systemBlue))
-                .cornerRadius(12)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
             }
         }
         .padding()
         .background(Color(.white))
-        .cornerRadius(12)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
 struct RoomRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomRowView()
+        RoomRowView(room: Room.getRoom())
     }
 }

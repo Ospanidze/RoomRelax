@@ -13,7 +13,7 @@ struct PeculiarityRowView: View {
     
     var body: some View {
         Text(text)
-            .lineLimit(1)
+            .lineLimit(2)
             .font(.system(size: 16, weight: .medium))
             .foregroundColor(.grayTextColor())
             .padding(EdgeInsets(top: 5,
@@ -21,7 +21,7 @@ struct PeculiarityRowView: View {
                                 bottom: 5,
                                 trailing: 10))
             .background(Color.backgroundColor())
-            .cornerRadius(5)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
     }
 }
 
