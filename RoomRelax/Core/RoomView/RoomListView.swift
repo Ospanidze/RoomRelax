@@ -18,7 +18,7 @@ struct RoomListView: View {
                 RoomRowView(room: room)
             }
         }
-        .onAppear { 
+        .onAppear {
             viewModel.getRooms()
         }
         .background(
@@ -35,6 +35,11 @@ struct RoomListView: View {
                         .foregroundColor(.black)
                 }
             }
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }

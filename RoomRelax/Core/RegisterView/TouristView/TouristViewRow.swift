@@ -41,32 +41,21 @@ struct TouristViewRow: View {
            //Spacer()
             
             if isTapped {
-                VStack(spacing: 0) {
+                VStack(spacing: 8) {
                     TextFieldView(text: $textFieldData.firstName, title: "Имя", placeholder: "Имя")
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
-                    
+                        
                     TextFieldView(text: $textFieldData.lastName, title: "Фамилия", placeholder: "Фамилия")
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                    
-                    
+                        
                     TextView(text: $textFieldData.dateBirthday, placeholder: "Дата Рождения")
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                    
+   
                     TextView(text: $textFieldData.nationality, placeholder: "Гражданство")
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                    
+                        
                     TextView(text: $textFieldData.passportID, placeholder: "Номер загранпаспорта")
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                    
+                            
                     TextView(text: $textFieldData.validity, placeholder: "Срок действия загранпаспорта")
-                        .padding(.horizontal)
                         .padding(.bottom, 8)
                 }
+                .padding(.horizontal)
             }
         }
         .background(Color.white)
